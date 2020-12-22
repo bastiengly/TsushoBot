@@ -1,0 +1,36 @@
+{
+  "win": [
+    "You tossed dice and landed a 7.",
+    "You tossed dice and landed an 11.",
+    "You threw a dart and it landed on the bullseye.",
+    "You drew two cards and they were both 1s.",
+    "You drew two cards and they were both 2s.",
+    "You drew two cards and they were both 3s.",
+    "You drew two cards and they were both 4s.",
+    "You drew two cards and they were both 5s.",
+    "You drew two cards and they were both 6s.",
+    "You drew two cards and they were both 7s.",
+    "You drew two cards and they were both 8s.",
+    "You drew two cards and they were both 9s.",
+    "You drew two cards and they were both 10s.",
+    "You drew two cards and they were both jacks.",
+    "You drew two cards and they were both queens.",
+    "You drew two cards and they were both kings.",
+    "You drew two cards and they were both aces.",
+    "You and the dealer picked drinks and you didn't drink the poison.",
+    "You called heads on a coinflip, and it was heads.",
+    "You called tails on a coinflip, and it was tails.",
+    "You played Russian roulette with the dealer and the dealer lost."
+  ],
+  "loss": [
+    "You tossed dice and rolled garbage.",
+    "You threw a dart and it missed the board.",
+    "You threw a dart and it landed in the wrong zone.",
+    "You tried to throw a dart but dropped it instead.",
+    "You drew two cards but they don't match.",
+    "You and the dealer picked drinks but you picked the poison.",
+    "You called heads on a coinflip, but it was tails.",
+    "You called tails on a coinflip, but it was heads.",
+    "You played Russian roulette with the dealer and you lost."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "timeBeforeNextRound": 10,
+  "pointsRequired": 10000,
+  "points": {
+    "one": 10,
+    "five": 5,
+    "three_of_a_kind": 50,
+    "four_of_a_kind": 80,
+    "full_house": 125,
+    "straight_low": 175,
+    "straight_high": 225,
+    "flush": 300
+  },
+  "messages": {
+    "nothing": "nothing special",
+    "three_of_a_kind": "a Three of a Kind",
+    "four_of_a_kind": "a Four of a Kind",
+    "full_house": "a Full House",
+    "straight_low": "a Low Straight",
+    "straight_high": "a High Straight",
+    "flush": "a Flush"
+  },
+  "colors": {
+    "nothing": 16777214,
+    "three_of_a_kind": 2201331,
+    "four_of_a_kind": 13491257,
+    "full_house": 16750592,
+    "straight_low": 16733986,
+    "straight_high": 16727296,
+    "flush": 14696699
+  }
+}

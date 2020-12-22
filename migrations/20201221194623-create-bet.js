@@ -1,25 +1,28 @@
 "use strict";
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable("Users", {
+    await queryInterface.createTable("Bets", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      discordId: {
+      userId: {
         allowNull: false,
-        unique: true,
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Users",
+          key: "id",
+        },
       },
-      count: {
+      outcome: {
         defaultValue: 0,
         type: Sequelize.INTEGER,
       },
-      whitelisted: {
-        defaultValue: false,
-        type: Sequelize.BOOLEAN,
+      amount: {
+        defaultValue: 0,
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,
@@ -32,6 +35,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Bets");
   },
 };

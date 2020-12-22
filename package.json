@@ -1,11 +1,13 @@
 {
   "name": "tsushobot",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Tsusho Discord bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "mocha",
+    "start": "node index.js",
+    "cloneEnv": "node scripts/cloneEnv.js --clone",
+    "version": "node -p \"require('./package').version\""
   },
   "repository": {
     "type": "git",
@@ -18,13 +20,21 @@
   },
   "homepage": "https://github.com/VuongRon/TsushoBot#readme",
   "dependencies": {
+    "axios": "^0.21.0",
     "discord.js": "^12.4.1",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
+    "mime-types": "^2.1.27",
     "multivariate-normal": "^0.1.2",
     "numbers": "^0.7.0",
     "sequelize": "^6.3.5",
     "sequelize-cli": "^6.2.0",
     "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "sinon": "^9.2.2",
+    "sinon-chai": "^3.5.0",
+    "mocha": "^8.2.1"
   }
 }

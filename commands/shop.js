@@ -16,7 +16,7 @@ const embed = (msg, args, user) => {
     fields.push({
       name: `${item.id}. ${item.name}`,
       value: eval("!user." + item.userp)
-        ? `**${item.price}** :yen: \n${item.flvrshop}`
+        ? `**${item.price}** Tsushobucks \n${item.flvrshop}`
         : `:white_check_mark: You own this item`,
     })
   );
@@ -42,7 +42,7 @@ const shop = async (msg, args) => {
 
 module.exports = {
   name: "!shop",
-  description: "Spend your :yen: here",
+  description: "Spend your Tsushobucks here",
   execute(msg, args, options = {}) {
     shop(msg, args);
   },

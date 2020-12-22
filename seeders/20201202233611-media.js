@@ -2,11 +2,11 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkInsert("Users", [
+    await queryInterface.bulkInsert("Media", [
       {
-        discordId: "1234567890",
-        count: 5,
-        whitelisted: true,
+        mediaContent: "https://test.com/",
+        requestedByUserId: "1234567890",
+        commandName: "alk",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -14,6 +14,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("Users", null, {});
+    await queryInterface.bulkDelete("Media", null, {});
   },
 };

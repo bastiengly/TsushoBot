@@ -44,11 +44,11 @@ const embed = (msg, args, user) => {
     },
     {
       name: ":yen:",
-      value: `**${user.yen}**`,
+      value: `**${user.User.balance}**`,
     },
     {
       name: "\u200b",
-      value: `Your current inventory is worth **${user.getValueOfInv()}** :yen:`,
+      value: `Your current inventory is worth **${user.getValueOfInv()}** Tsushobucks`,
     },
   ];
   fields.forEach((field, i) => {

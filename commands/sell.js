@@ -7,7 +7,7 @@ const embed = (msg, args, valueOfInf) => {
   const argsTitle = true;
   const fields = [
     {
-      name: `You sold all your fish for **${valueOfInf}** :yen:`,
+      name: `You sold all your fish for **${valueOfInf}** Tsushobucks`,
       value: "Dont go spend it all in one place!",
     },
   ];
@@ -32,7 +32,7 @@ const selling = async (msg, args) => {
 
 module.exports = {
   name: "!sell",
-  description: "Sells your fish inventory for :yen:",
+  description: "Sells your fish inventory for Tsushobucks",
   execute(msg, args, options = {}) {
     selling(msg, args);
   },

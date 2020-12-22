@@ -1,5 +1,6 @@
 # TsushoBot
 A Discord.js based Discord chat bot. 🤖
+
 ### Setting up a Test Environment
 1. Create a Discord server which will serve as your test server
     * Click Add a Server at the very bottom of your Discord server list panel  
@@ -24,6 +25,55 @@ A Discord.js based Discord chat bot. 🤖
     * Navigate to the project's folder in the command line
     * Check out to a new branch
     * Install the required dependencies by running ```npm i```
-    * Create an ```.env``` file in the root folder
-    * Inside of the ```.env``` file, create a ```TOKEN``` variable and set it to the Token you copied from your Bot page, e.g. ```TOKEN=YOURTOKENGOESHERE```
+    * Execute ```npm run cloneEnv``` - this will create a new ```.env``` file
+    * If you wish to overwrite the existing ```.env``` (**not recommended**), execute ```npm run cloneEnv -- --force```
+    * Check the contents of ```.env``` for more details on feature configuration
+    * Inside of the ```.env``` file, update the ```TOKEN``` variable and set it to the Token you copied from your Bot page, e.g. ```TOKEN=YOURTOKENGOESHERE```
+    * Run tests with ```npm test```
     * The project should be functional at this point. Try running ```npm start``` - if you get any errors, you probably skipped a step.
+
+---
+
+### Adding a new command
+
+1. Create a new file under the `commands` directory:
+
+```
+/ commands
+  |- your_command.js
+```
+
+2. Add a command template
+
+```js
+const embedService = require("../services/embedService");
+
+const embedMessage = (msg, args, options) => {
+  /*
+  |--------------------------------------------------------------------------
+  | Command logic
+  |--------------------------------------------------------------------------
+  | 
+  | Use this template if your command embeds a message
+  | 
+  */
+
+  // @see: https://leovoel.github.io/embed-visualizer/
+  // You can change the color accent by passing:
+  //  color: your_color_value_decimal
+  // @see: https://convertingcolors.com/
+  return embedService.embed(msg, args, {
+    description:  "Embed description contents",
+  });
+};
+
+module.exports = {
+  name: "!your_command",
+  description: "Your command description",
+  execute(msg, args, options = {}) {
+    // You can also pass constants only as options.constants
+    embedMessage(msg, args, options);
+  },
+};
+
+```
